@@ -1,0 +1,7 @@
+FROM node:12
+WORKDIR /docker_https_project
+COPY package.json /docker_https_project
+RUN npm install
+COPY . /docker_https_project
+CMD node index.js
+EXPOSE 3334
